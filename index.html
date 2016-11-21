@@ -1,5 +1,4 @@
-﻿
-  <!DOCTYPE html>
+﻿<!DOCTYPE html>
   <html>
     <head>
       <!--Import Google Icon Font-->
@@ -9,11 +8,45 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script>
+	 var list = [
+	  {"ig":"http://www.study-in-cebu.com/img/sightseeing/bohol.jpg",
+		"tl":"宿霧薄荷島",
+		"ct":"菲律賓<br>度假村飯店",
+		"hl":"http://howen623.pixnet.net/blog/post/34005363"},
+	  {"ig":"http://userdisk.webry.biglobe.ne.jp/010/355/59/N000/000/007/138283326275451181227.jpg",
+		"tl":"九州旅遊行程",
+		"ct":"日本<br>食物住宿",
+		"hl":"http://howen623.pixnet.net/blog/category/1657159"},
+	  {"ig":"http://blog.xuite.net/gerry.huang/blog/15041270/cover600.jpg",
+		"tl":"日本關西自由行",
+		"ct":"京都 錦市場<br>賞楓",
+		"hl":"http://howen623.pixnet.net/blog/category/1646182"},
+	  {"ig":"http://waopage.up.n.seesaa.net/waopage/image/DSC_021520WXGA.jpg?d=a10",
+		  "tl":"日本東京自由行",
+		  "ct":"淺草站<br>雷門",
+		  "hl":"http://howen623.pixnet.net/blog/post/33026365-%E2%98%85%E3%80%90%E6%97%A5%E6%9C%AC%E6%9D%B1%E4%BA%AC%E3%80%91%E6%B7%BA%E8%8D%89%E9%9B%B7%E9%96%80%E3%80%81%E4%BB%B2%E4%BB%8B%E4%B8%96%E9%80%9A%E3%80%81%E6%B7%BA%E8%8D%89%E5%AF%BA"},
+	  ];
+	  var str='';
+	  function f(){
+		for(i = 0;i<list.length;i++){
+			str += 	'<li class="collection-item avatar"> <img src="'+list[i].ig+ '"alt="" class="circle">\
+				<span class="title">'+list[i].tl+'</span>'+'<p>'+list[i].ct+'</p>\
+				  <a href="'+list[i].hl+'" class="secondary-content"><i class="material-icons">grade</i></a></li>';
+		}
+	  document.getElementById("aaa").innerHTML = str;
+	  }
+	  
+	  
+	  </script>
+	  
     </head>
 
-    <body>
+    <body onload="f()">
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
+    <ul class="collection" id = "aaa">
+	</ul>
+	</body>
   </html>
